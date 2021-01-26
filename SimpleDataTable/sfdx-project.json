@@ -1,11 +1,46 @@
 {
     "packageDirectories": [
+        
         {
-            "path": "force-app",
+            "path": "baseSetup",
+            "package": "Test App: Base Setup",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
             "default": true
+        },
+        {
+            "path": "simpleDataTable",
+            "package": "Test App: Simple Data Table",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "Test App: Base Setup",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "dataTable",
+            "package": "Test App: Data Table",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "Test App: Simple Data Table",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
         }
     ],
-    "namespace": "",
+    "namespace": "romanderevensky",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "50.0"
+    "sourceApiVersion": "50.0",
+    "packageAliases": {
+        "Test App: Base Setup": "0Ho09000000KyncCAC",
+        "Test App: Simple Data Table": "0Ho09000000KynhCAC",
+        "Test App: Data Table": "0Ho09000000KynmCAC"
+    }
 }
